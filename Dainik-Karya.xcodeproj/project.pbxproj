@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680E0D0E24C844F600D697C5 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680E0D0D24C844F600D697C5 /* SwipeTableViewController.swift */; };
+		6891A62B24C0A81D0046C764 /* MukyaSuchiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6891A62A24C0A81D0046C764 /* MukyaSuchiTableViewController.swift */; };
 		68A9D2A624BDB81A0037BC3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9D2A524BDB81A0037BC3B /* AppDelegate.swift */; };
 		68A9D2A824BDB81A0037BC3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9D2A724BDB81A0037BC3B /* SceneDelegate.swift */; };
-		68A9D2AA24BDB81A0037BC3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9D2A924BDB81A0037BC3B /* ViewController.swift */; };
+		68A9D2AA24BDB81A0037BC3B /* DainikViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9D2A924BDB81A0037BC3B /* DainikViewController.swift */; };
 		68A9D2AD24BDB81A0037BC3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A9D2AB24BDB81A0037BC3B /* Main.storyboard */; };
 		68A9D2AF24BDB8230037BC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A9D2AE24BDB8230037BC3B /* Assets.xcassets */; };
 		68A9D2B224BDB8230037BC3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A9D2B024BDB8230037BC3B /* LaunchScreen.storyboard */; };
+		68C651CF24C7879900808593 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C651CE24C7879900808593 /* Item.swift */; };
+		68C651D124C787AB00808593 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C651D024C787AB00808593 /* Category.swift */; };
+		8CCD32F13DB4CCC921F99732 /* libPods-Dainik-Karya.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C534FFAFDD4577E1325B09 /* libPods-Dainik-Karya.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3243AA9AF87745A542DAE7EF /* Pods-Dainik-Karya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dainik-Karya.debug.xcconfig"; path = "Target Support Files/Pods-Dainik-Karya/Pods-Dainik-Karya.debug.xcconfig"; sourceTree = "<group>"; };
+		33A230BE64C1A49A0A08A053 /* Pods-Dainik-Karya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dainik-Karya.release.xcconfig"; path = "Target Support Files/Pods-Dainik-Karya/Pods-Dainik-Karya.release.xcconfig"; sourceTree = "<group>"; };
+		680E0D0D24C844F600D697C5 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		6891A62A24C0A81D0046C764 /* MukyaSuchiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukyaSuchiTableViewController.swift; sourceTree = "<group>"; };
 		68A9D2A224BDB81A0037BC3B /* Dainik-Karya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dainik-Karya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A9D2A524BDB81A0037BC3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68A9D2A724BDB81A0037BC3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68A9D2A924BDB81A0037BC3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68A9D2A924BDB81A0037BC3B /* DainikViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DainikViewController.swift; sourceTree = "<group>"; };
 		68A9D2AC24BDB81A0037BC3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68A9D2AE24BDB8230037BC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68A9D2B124BDB8230037BC3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68A9D2B324BDB8230037BC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68C651CE24C7879900808593 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		68C651D024C787AB00808593 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		96C534FFAFDD4577E1325B09 /* libPods-Dainik-Karya.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dainik-Karya.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCD32F13DB4CCC921F99732 /* libPods-Dainik-Karya.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6891A5FE24BEF0B10046C764 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6891A62A24C0A81D0046C764 /* MukyaSuchiTableViewController.swift */,
+				68A9D2A924BDB81A0037BC3B /* DainikViewController.swift */,
+				680E0D0D24C844F600D697C5 /* SwipeTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6891A5FF24BEF0D60046C764 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68A9D2AB24BDB81A0037BC3B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6891A60024BEF0E00046C764 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68A9D2AE24BDB8230037BC3B /* Assets.xcassets */,
+				68A9D2B024BDB8230037BC3B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6891A60324BEF11F0046C764 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				68C651D024C787AB00808593 /* Category.swift */,
+				68C651CE24C7879900808593 /* Item.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 		68A9D29924BDB81A0037BC3B = {
 			isa = PBXGroup;
 			children = (
 				68A9D2A424BDB81A0037BC3B /* Dainik-Karya */,
 				68A9D2A324BDB81A0037BC3B /* Products */,
+				96881AA03728B794588FD4E0 /* Pods */,
+				F49F36CCFE45ED4FC886A3C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +109,30 @@
 			children = (
 				68A9D2A524BDB81A0037BC3B /* AppDelegate.swift */,
 				68A9D2A724BDB81A0037BC3B /* SceneDelegate.swift */,
-				68A9D2A924BDB81A0037BC3B /* ViewController.swift */,
-				68A9D2AB24BDB81A0037BC3B /* Main.storyboard */,
-				68A9D2AE24BDB8230037BC3B /* Assets.xcassets */,
-				68A9D2B024BDB8230037BC3B /* LaunchScreen.storyboard */,
+				6891A5FE24BEF0B10046C764 /* Controllers */,
+				6891A60324BEF11F0046C764 /* Data Model */,
+				6891A5FF24BEF0D60046C764 /* View */,
+				6891A60024BEF0E00046C764 /* Supporting Files */,
 				68A9D2B324BDB8230037BC3B /* Info.plist */,
 			);
 			path = "Dainik-Karya";
+			sourceTree = "<group>";
+		};
+		96881AA03728B794588FD4E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3243AA9AF87745A542DAE7EF /* Pods-Dainik-Karya.debug.xcconfig */,
+				33A230BE64C1A49A0A08A053 /* Pods-Dainik-Karya.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F49F36CCFE45ED4FC886A3C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96C534FFAFDD4577E1325B09 /* libPods-Dainik-Karya.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68A9D2B624BDB8230037BC3B /* Build configuration list for PBXNativeTarget "Dainik-Karya" */;
 			buildPhases = (
+				8761D780974D9AE61F4B581F /* [CP] Check Pods Manifest.lock */,
 				68A9D29E24BDB81A0037BC3B /* Sources */,
 				68A9D29F24BDB81A0037BC3B /* Frameworks */,
 				68A9D2A024BDB81A0037BC3B /* Resources */,
@@ -133,14 +202,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8761D780974D9AE61F4B581F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dainik-Karya-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68A9D29E24BDB81A0037BC3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68A9D2AA24BDB81A0037BC3B /* ViewController.swift in Sources */,
+				68A9D2AA24BDB81A0037BC3B /* DainikViewController.swift in Sources */,
 				68A9D2A624BDB81A0037BC3B /* AppDelegate.swift in Sources */,
+				6891A62B24C0A81D0046C764 /* MukyaSuchiTableViewController.swift in Sources */,
+				680E0D0E24C844F600D697C5 /* SwipeTableViewController.swift in Sources */,
+				68C651CF24C7879900808593 /* Item.swift in Sources */,
 				68A9D2A824BDB81A0037BC3B /* SceneDelegate.swift in Sources */,
+				68C651D124C787AB00808593 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +380,14 @@
 		};
 		68A9D2B724BDB8230037BC3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3243AA9AF87745A542DAE7EF /* Pods-Dainik-Karya.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Dainik-Karya/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +402,14 @@
 		};
 		68A9D2B824BDB8230037BC3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33A230BE64C1A49A0A08A053 /* Pods-Dainik-Karya.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Dainik-Karya/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

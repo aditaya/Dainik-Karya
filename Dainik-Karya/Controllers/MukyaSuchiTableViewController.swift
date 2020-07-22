@@ -7,84 +7,132 @@
 //
 
 import UIKit
+import RealmSwift
+import ChameleonFramework
 
-class MukyaSuchiTableViewController: UITableViewController {
 
+class MukyaSuchiTableViewController: SwipeTableViewController {
+
+    
+    var realm = try! Realm()
+    var categories : Results<Category>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
+        loadCategories()
+        tableView.rowHeight = 80.0
+        tableView.separatorStyle = .none
+        
+       
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func viewWillAppear(_ animated: Bool) {
+    
+        guard let navBar = (navigationController?.navigationBar) else {
+            fatalError("Navigation Controller doesn't exist")
+            }
+        
+        navBar.backgroundColor = UIColor(hexString: "00B06B")
     }
 
+// MARK: - Database or Data Manipulation Method
+    
+    func loadCategories() {
+         
+        categories = realm.objects(Category.self)
+             tableView.reloadData()
+        
+     
+    }
+    
+    
+    func save(category: Category ) {
+        
+        do {
+            try realm.write {
+                realm.add(category)
+            }
+        } catch {
+            print("Error in Saving Category \(error)")
+        }
+        tableView.reloadData()
+    }
+ 
+    
+    // MARK: - Delete Data from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+            if let categoryForDeletion = self.categories?[indexPath.row] {
+                        do {
+                            try self.realm.write {
+                                self.realm.delete(categoryForDeletion)
+                        }
+                        } catch {
+                            print("Error in deletion \(error)")
+                        }
+                        }
+    }
+    
+    // MARK: - TableView Method
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return categories?.count ?? 1
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+      
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+            
+            cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories Added Yet"
+        
+        cell.backgroundColor = UIColor(hexString: categories?[indexPath.row].color ?? "1D9BF6")
+        cell.textLabel?.textColor = ContrastColorOf(cell.backgroundColor!, returnFlat: true)
         return cell
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+
+// MARK: - Add Button Pressed
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add a new Mukhya Karya", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add", style: .default) { (action) in
+            let newCategory = Category()
+            newCategory.name = textField.text!
+            newCategory.color = UIColor.randomFlat().hexValue()
+//            self.categories.append(newCategory)
+             self.save(category: newCategory)
+            
+        }
+        alert.addAction(action)
+        
+        alert.addTextField { (field) in
+            textField = field
+            textField.placeholder = "Add a new Mukhya Karya"
+        }
+    
+        present(alert, animated: true, completion: nil)
+    
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+ // MARK: - TableView Delegate Method
+  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToItems", sender: self)
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destinationVC = segue.destination as! DainikViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedCategory = categories?[indexPath.row]
+        }
     }
-    */
-
+    
 }
+
+

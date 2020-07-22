@@ -6,7 +6,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dainik Karya Suchi-->
+        <!--Mukhya Suchi-->
+        <scene sceneID="9cx-GY-bES">
+            <objects>
+                <tableViewController id="p6W-Ge-f1E" customClass="MukyaSuchiTableViewController" customModule="Dainik_Karya" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Rg-ew-CZp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="JDG-EK-SC0" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JDG-EK-SC0" id="jca-pt-jcd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="p6W-Ge-f1E" id="G8E-05-uns"/>
+                            <outlet property="delegate" destination="p6W-Ge-f1E" id="dpl-hh-Qls"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mukhya Suchi" id="E9S-ux-VJB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hcN-xW-mi2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="p6W-Ge-f1E" id="ILW-TV-4Ap"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="5GZ-Ov-JD8" kind="show" identifier="goToItems" id="nra-5t-YaE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vl-1l-qBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693" y="117"/>
+        </scene>
+        <!--Karya Suchi-->
         <scene sceneID="zbe-wb-NkN">
             <objects>
                 <tableViewController id="5GZ-Ov-JD8" customClass="DainikViewController" customModule="Dainik_Karya" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,9 +53,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="D1L-0R-rfi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="5GZ-Ov-JD8" id="xkA-5W-fob"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DainikItemCell" id="zTT-YJ-vhp">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zTT-YJ-vhp" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zTT-YJ-vhp" id="ejl-FZ-tz6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -29,18 +76,20 @@
                             <outlet property="delegate" destination="5GZ-Ov-JD8" id="gDN-wg-it4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Dainik Karya Suchi" id="nHu-ZV-of2">
+                    <navigationItem key="navigationItem" title="Karya Suchi" id="nHu-ZV-of2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m0C-c5-LTZ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="5GZ-Ov-JD8" id="JHK-OM-Tzg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="D1L-0R-rfi" id="iTi-KK-cKi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbi-P0-uUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743.4782608695652" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2610" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iwC-e3-Vv8">
@@ -54,10 +103,16 @@
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xjg-ge-EWX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="5GZ-Ov-JD8" kind="relationship" relationship="rootViewController" id="Qni-6y-SP7"/>
+                        <segue destination="p6W-Ge-f1E" kind="relationship" relationship="rootViewController" id="HZ4-9h-Rjt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6b-K9-2rN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
