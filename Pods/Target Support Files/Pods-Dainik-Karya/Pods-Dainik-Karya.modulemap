@@ -1,0 +1,6 @@
+module Pods_Dainik_Karya {
+  umbrella header "Pods-Dainik-Karya-umbrella.h"
+
+  export *
+  module * { export * }
+}
