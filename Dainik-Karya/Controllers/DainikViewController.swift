@@ -55,7 +55,7 @@ class DainikViewController: SwipeTableViewController     {
 
             navBar.tintColor = ContrastColorOf(navBarColor, returnFlat: true)
             searchBar.tintColor = navBarColor
-                navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
+                navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
             }
         }
     }
